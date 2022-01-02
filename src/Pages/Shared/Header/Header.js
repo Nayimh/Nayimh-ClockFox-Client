@@ -9,18 +9,19 @@ const Header = () => {
     const { user, logout } = useAuth();
     return (
         <div>
-            <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
+            <Navbar bg="transparent" variant="light" sticky="top" collapseOnSelect expand="lg">
                 <Container>
-                    <Navbar.Brand as={Link} to="/home">ClockFox</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/home" className="fw-bold">ClockFox</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
-                        <Nav.Link className="text-white" as={HashLink} to="/home">Home</Nav.Link>
+                        <Nav.Link className="text-dark" as={HashLink} to="/home">Home</Nav.Link>
+                        <Nav.Link className="text-dark" as={HashLink} to="/store">Store</Nav.Link>
                         {user.email ?
-                            <Nav.Link className="text-white" as={HashLink} onClick={logout} to="/login">Logout</Nav.Link> :
-                            <Nav.Link className="text-white" as={HashLink} to="/login">Login</Nav.Link>}
+                            <Nav.Link className="text-dark" as={HashLink} onClick={logout} to="/login">Logout</Nav.Link> :
+                            <Nav.Link className="text-dark" as={HashLink} to="/login">Login</Nav.Link>}
 
                         {user.email &&
-                            <Navbar.Text className="text-warning">
+                            <Navbar.Text className="text-primary fw-bold fst-italic">
                                 Hi, {user?.displayName}
                             </Navbar.Text>}
                     </Navbar.Collapse>

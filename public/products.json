@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "name": "Rolex GMT Master",
+        "price": "23050",
+        "image": "https://i.ibb.co/Ks5tHWs/img11.jpg",
+        "description": "Features a 40mm stainless steel case with a black bezel surrounding a black dial on a stainless steel Oyster bracelet with folding buckle."
+    },
+    {
+        "id": 2,
+        "name": "Rolex Submariner Date",
+        "price": "19950",
+        "image": "https://i.ibb.co/C8Sy7dT/img10.jpg",
+        "description": "40mm stainless steel case with a black aluminum bezel surrounding a black dial on a stainless steel Oyster bracelet with folding buckle."
+    },
+    {
+        "id": 3,
+        "name": "Rolex Daytona",
+        "price": "16890",
+        "image": "https://i.ibb.co/bNBvxR4/img12.jpg",
+        "description": "Modern marvels in shining gold and platinum, the catalog of references is overwhelmingly expansive and impressively handsome."
+    },
+    {
+        "id": 4,
+        "name": "Patek Philippe Grand",
+        "price": "21280",
+        "image": "https://i.ibb.co/TcBbkpg/img9.jpg",
+        "description": "40mm platinum case surrounding a blue dial on a blue alligator strap with a platinum Calatrava Cross deployant buckle."
+    },
+    {
+        "id": 5,
+        "name": "Rolex Datejust",
+        "price": "28700",
+        "image": "https://i.ibb.co/RTr3ykM/img13.jpg",
+        "description": "Everose gold case with a diamond bezel surrounding a pink Sundust diamond star dial on an 18k Everose gold President bracelet with folding buckle"
+    },
+    {
+        "id": 6,
+        "name": "Bulova Fantasmic",
+        "price": "11080",
+        "image": "https://i.ibb.co/YbSPNrq/img.jpg",
+        "description": "Perfect for indoors or outdoors, oversize 16 3/4-inch diameter clock is weather resistant and can be used in any location."
+    },
+    {
+        "id": 7,
+        "name": "Vermont Country",
+        "price": "9250",
+        "image": "https://i.ibb.co/jbK0r1V/img1.jpg",
+        "description": "Bold, raised 44″ Arabic numerals in antiqued gold-tone pop against the weathered wood finished in light gray stain."
+    },
+    {
+        "id": 8,
+        "name": "Tawney Outdoor",
+        "price": "13050",
+        "image": "https://i.ibb.co/SRKx4X4/img2.jpg",
+        "description": "This charismatic 24.25″ diameter metal wall clock is 3.25″ deep and features a medium charcoal finish."
+    },
+    {
+        "id": 9,
+        "name": "Bay Shore",
+        "price": "11050",
+        "image": "https://i.ibb.co/Ryv31Sk/img3.jpg",
+        "description": "Designed to be used indoors or outdoors and includes a glass cover and rubber seals to protect the inside of the clock."
+    },
+    {
+        "id": 10,
+        "name": "Bulova Sandpiper",
+        "price": "15750",
+        "image": "https://i.ibb.co/9GfNq9c/img4.jpg",
+        "description": "Music to your ears, indoors and out. Weather resistant Modern oversize gallery clock can be outside all year long."
+    },
+    {
+        "id": 11,
+        "name": "Series 5 44mm Ceramic",
+        "price": "5099",
+        "image": "https://i.ibb.co/LRyN7z9/img5.jpg",
+        "description": "45mm case over 50 percent more screen area. Always-On Retina LTPO OLED display, 1,000 nits. Ion-X glass display on aluminum cases"
+    },
+    {
+        "id": 12,
+        "name": "Amazefit GTS 3r",
+        "price": "3050",
+        "image": "https://i.ibb.co/chygq2Z/img6.jpg",
+        "description": "Dimensions: 42.4x36x8.8mm. Body Material: Aluminum alloy. Water-resistance Grade: 5 ATM. Buttons: 1"
+    },
+    {
+        "id": 13,
+        "name": "Zeblaze GTR 2",
+        "price": "3250",
+        "image": "https://i.ibb.co/BP6MFsC/img7.jpg",
+        "description": "Bluetooth Version: 5.0. Operating Mode: Touch Screen. APP: GloryFit. Customize Watch Face: Support."
+    },
+    {
+        "id": 14,
+        "name": "Haylou GST LS09B",
+        "price": "4035",
+        "image": "https://i.ibb.co/vPwwZSh/img8.jpg",
+        "description": "Display: 1.69″ TFT display. Resolution: 240x280px. Bluetooth version: Bluetooth V5.1. Battery capacity: 220mAh"
+    },
+    {
+        "id": 15,
+        "name": "Rae Dunn Desk Clock",
+        "price": "1950",
+        "image": "https://i.ibb.co/PtYJW3q/img14.jpg",
+        "description": "Battery Operated Round Modern Rustic Design, Top Handle for Bedroom, Office, Kitchen - Small Classic Analog Display."
+    },
+    {
+        "id": 16,
+        "name": "Nikky Home Shabby",
+        "price": "15950",
+        "image": "https://i.ibb.co/qFJMSsn/img15.jpg",
+        "description": "Body is made of pewter and resin. From the Shabby Chic Cottage Collection. Requires one AA battery (not included)"
+    },
+    {
+        "id": 17,
+        "name": "Stonebriar Large",
+        "price": "2950",
+        "image": "https://i.ibb.co/d2tFKQC/img16.jpg",
+        "description": "12 Inch Decorative Battery Operated Table Top Clock with Roman Numerals and Antique Finish, 12, Worn White"
+    }
+]
