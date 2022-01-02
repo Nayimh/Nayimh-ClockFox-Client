@@ -12,6 +12,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import Home from './Pages/Home/Home/Home';
+import Store from './Pages/Store/Store';
 
 function App() {
   return (
@@ -22,9 +23,9 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/home' element={<Home />} />
+            <Route path='/store' element={<Store />} />
 
 
-            
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='*' element={<NotFound />} />
