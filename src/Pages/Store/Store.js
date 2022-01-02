@@ -34,7 +34,7 @@ const Store = () => {
                             <p className="px-4 my-2">{pd.description}</p>
                             <h5 className="px-4 my-3 fw-bold fst-italic text-center">Price: {pd.price} tk</h5>
                             <div className='text-center'>
-                                <Link to={`/order/${pd.id}`}>
+                                <Link to={`/purchase/${pd.id}`}>
                                     <Button variant="outline-primary" className="fw-bold mb-3 px-3 py-2">Book Now</Button>
                                 </Link>
                             </div>

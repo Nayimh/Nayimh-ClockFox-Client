@@ -16,14 +16,15 @@ const Header = () => {
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link className="text-dark" as={HashLink} to="/home">Home</Nav.Link>
                         <Nav.Link className="text-dark" as={HashLink} to="/store">Store</Nav.Link>
+
+                        {user.email && <Nav.Link className="text-dark" as={HashLink} to="/dashboard">Dashboard</Nav.Link>}
+
                         {user.email ?
                             <Nav.Link className="text-dark" as={HashLink} onClick={logout} to="/login">Logout</Nav.Link> :
-                            <Nav.Link className="text-dark" as={HashLink} to="/login">Login</Nav.Link>}
+                            <Nav.Link className="text-dark" as={HashLink} to="/login">Login</Nav.Link>
+                        }
 
-                        {user.email &&
-                            <Navbar.Text className="text-primary fw-bold fst-italic">
-                                Hi, {user?.displayName}
-                            </Navbar.Text>}
+                        {user.email && <Navbar.Text className="text-primary fw-bold fst-italic">Hi, {user?.displayName}</Navbar.Text>}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

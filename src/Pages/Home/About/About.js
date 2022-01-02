@@ -15,9 +15,6 @@ const About = () => {
 
     return (
         <div className="mx-auto">
-            {/* <div className="text-center fst-italic bg-dark text-warning m-0 py-3">
-                <h2>About Us</h2>
-            </div> */}
             <div className="text-center m-0 py-3 mt-2">
                 <h1 className='fw-bold fst-italic text-primary'>About Us</h1>
             </div>
@@ -25,9 +22,9 @@ const About = () => {
             <div className="col-lg-10 d-flex flex-wrap align-items-center pb-4 mx-auto my-3">
                 <div className="col-lg-8 col-sm-12">
                     <h1 className="text-center my-3 fw-bolder fst-italic">ClockFox&trade;</h1>
-                    <p className="fs-5 mx-5 my-3">This is the best in town institute for learning English efficiently. Our expert trainer helps you learn English easily. We provide extra care for weak learners and provide financial support for poor but brilliant student.
+                    <p className="fs-5 mx-5 my-3">ClockFox is one of the well-known, reputed clock-seller in the country. Our products price range starts from affordable upto collector's level. We also sell luxurious watches of different brands. We take pre-booking for limited edition products.
                     <br></br>
-                    We offer "Batch-Topper" an opportunity to work with us.</p>
+                    We arrange private display on request.</p>
                     <div className="fs-5 mx-5 my-3">
                         <h3 className="fw-bold fst-italic">We Provide :</h3>
                         <ul className="ms-5 fst-italic ">
