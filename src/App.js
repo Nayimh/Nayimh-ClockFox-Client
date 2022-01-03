@@ -23,6 +23,7 @@ import ManageOrders from './Pages/Dashboard/ManageOrders/ManageOrders';
 import PostReview from './Pages/Dashboard/PostReview/PostReview';
 import AddProduct from './Pages/Dashboard/AddProduct/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts/ManageProducts';
+import DashBoardMain from './Pages/Dashboard/Dashboard/DashboardMain';
 
 function App() {
   return (
@@ -37,16 +38,16 @@ function App() {
 
             <Route path='/purchase/:id' element={<PrivateRoute><Purchase /></PrivateRoute>} />
 
-            <Route path='/dashboard' element={<Dashboard />} >
-              <Route path='/dashboard' element={<DashboardHome />} />
-              <Route exact path={'/dashboard/my_orders'} element={<MyOrders />} />
-              <Route exact path={'/dashboard/review'} element={<PostReview />} />
+            <Route path='/dashboardmain' element={ <DashBoardMain />} >
+              <Route path='/dashboardmain' element={<DashboardHome />} />
+              <Route exact path={'/dashboardmain/my_orders'} element={<MyOrders />} />
+              <Route exact path={'/dashboardmain/review'} element={<PostReview />} />
 
               {/* Admin Route */}
-              <Route exact path={'/dashboard/admin'} element={<MakeAdmin />} />
-              <Route exact path={'/dashboard/manage_orders'} element={<ManageOrders />} />
-              <Route exact path={'/dashboard/manage_products'} element={<ManageProducts />} />
-              <Route exact path={'/dashboard/add_product'} element={<AddProduct />} />
+              <Route exact path={'/dashboardmain/admin'} element={<MakeAdmin />} />
+              <Route exact path={'/dashboardmain/manage_orders'} element={<ManageOrders />} />
+              <Route exact path={'/dashboardmain/manage_products'} element={<ManageProducts />} />
+              <Route exact path={'/dashboardmain/add_product'} element={<AddProduct />} />
             </Route>
 
             <Route path='/login' element={<Login />} />
