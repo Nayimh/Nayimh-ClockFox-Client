@@ -54,7 +54,7 @@ const Login = () => {
                         name="password"
                         onChange={handleOnChange} />
                 </Form.Group>
-                <Button variant="warning" type="submit">Sign in</Button>
+                <Button data-testId="btn" variant="primary" type="submit">Sign in</Button>
             </Form>
 
 

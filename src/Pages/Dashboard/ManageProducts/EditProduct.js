@@ -19,7 +19,7 @@ const style = {
 
 const EditProduct = ({openOrder, handleOrderClose, dataDelete}) => {
     const { itemName,image, price, categories, movement, diameter, waterResistance, gender, strap, dialColor,description} = dataDelete;
-console.log(dataDelete);
+
         const initialInfo = {
             itemName: itemName,
             price: price,

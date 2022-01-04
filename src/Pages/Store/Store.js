@@ -28,14 +28,14 @@ const Store = () => {
             <div className="product-container mx-5 pb-4">
                 {
                     product?.map((pd) => (
-                        <div key={pd.id} className="bg-light showroom mx-3 mb-3 rounded-3 shadow-lg">
+                        <div data-aos="zoom-in-up" data-aos-duration="3000" key={pd.id} className="bg-light showroom mx-3 mb-3 rounded-3 shadow-lg">
                             <img className="img-fluid w-80 border border-0 p-3 mb-1" src={pd.image} alt="not found" />
                             <h4 className="text-center fw-bold fst-italic my-2">{pd.name}</h4>
                             <p className="px-4 my-2">{pd.description}</p>
                             <h5 className="px-4 my-3 fw-bold fst-italic text-center">Price: {pd.price} tk</h5>
                             <div className='text-center'>
                                 <Link to={`/purchase/${pd._id}`}>
-                                    <Button variant="outline-primary" className="fw-bold mb-3 px-3 py-2">Book Now</Button>
+                                    <Button variant="outline-primary" className="fw-bold mb-3 px-3 py-2">Buy Now</Button>
                                 </Link>
                             </div>
                         </div>

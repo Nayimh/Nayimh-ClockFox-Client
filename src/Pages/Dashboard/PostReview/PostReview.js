@@ -15,7 +15,7 @@ const PostReview = () => {
 
         const userReview = { email, review };
 
-        const url = 'http://localhost:3030/reviews';
+        const url = 'https://sleepy-stream-55149.herokuapp.com/reviews';
         fetch(url, {
             method: 'POST',
             headers: {
@@ -34,6 +34,7 @@ const PostReview = () => {
         e.preventDefault();
     }
     return (
+        <div className='mt-5 pt-2'>
         <div className="col-lg-6 mx-auto my-5 border rounded-3 bg-light shadow-lg px-5 py-4">
             <div className="text-center text-danger fst-italic">
                 <h2>Post Your Opinion</h2>
@@ -56,7 +57,8 @@ const PostReview = () => {
                 </Form.Group>
                 <Button variant="primary" type="submit">Submit</Button>
             </Form>
-        </div>
+            </div>
+            </div>
     );
 };
 

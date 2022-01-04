@@ -12,7 +12,7 @@ const MakeAdmin = () => {
     const handleAdminSubmit = e => {
         const user = { email };
 
-        const url = 'http://localhost:3030/users/admin';
+        const url = 'https://sleepy-stream-55149.herokuapp.com/users/admin';
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -30,7 +30,8 @@ const MakeAdmin = () => {
         e.preventDefault();
     }
     return (
-        <div className="col-10 col-lg-5 mx-auto my-5 border bg-light border rounded-3 shadow-lg">
+        <div className=' pt-5'>
+        <div className="col-10 col-lg-5 mx-auto mt-5  border bg-light border rounded-3 shadow-lg">
             <Form onSubmit={handleAdminSubmit} className="mx-3 px-3 my-4">
                 <Form.Text className="text-dark fw-bold fst-italic mb-1 fs-3">Make Admin</Form.Text>
 
@@ -41,7 +42,8 @@ const MakeAdmin = () => {
 
                 <Button className="mb-3" variant="primary" type="submit">Confirm Admin</Button>
             </Form>
-        </div>
+            </div>
+            </div>
     );
 };
 

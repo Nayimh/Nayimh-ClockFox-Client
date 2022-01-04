@@ -2,10 +2,10 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link, Outlet } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
-import useAuth from '../../../hooks/useAuth';
+// import useAuth from '../../../hooks/useAuth';
 
 const Dashboard = () => {
-    const { admin } = useAuth();
+    // const { admin } = useAuth();
     return (
         <>
         <div className="d-flex">

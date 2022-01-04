@@ -5,6 +5,46 @@ import useAuth from '../../../hooks/useAuth';
 const ManageOrders = () => {
   const { user } = useAuth();
 
+
+  const [status, setStatus] = useState([]);
+  const [manageOrder, setManageOrder] = useState([]);
+
+  const handleUpdate = id => {
+      const productStatus = 'accepted';
+      setStatus(productStatus);
+
+      const isAccepted = { status };
+
+    
+      const url = `https://sleepy-stream-55149.herokuapp.com/orders/${id}`;
+      fetch(url, {
+          method: 'PUT',
+          headers: {
+              'content-type': 'application/json'
+          },
+          body: JSON.stringify(isAccepted)
+      })
+          .then(res => res.json())
+          .then(data => {
+              if (data.modifiedCount) {
+                  alert('Order Status updated');
+                  /* const remainingOrders = manageOrder.filter(order => order.status !== 'Pending');
+                  setManageOrder(remainingOrders); */
+              }
+          })
+  }
+
+  useEffect(() => {
+      
+      const url = 'https://sleepy-stream-55149.herokuapp.com/orders';
+      fetch(url)
+          .then(res => res.json())
+          .then(data => setManageOrder(data.orders))
+  }, [user]);
+
+
+
+
     const [itemOrder, setOrderItem] = useState([]);
   useEffect(() => {
     const url = `https://sleepy-stream-55149.herokuapp.com/orders`;
@@ -12,30 +52,7 @@ const ManageOrders = () => {
       .then((res) => res.json())
       .then((data) => setOrderItem(data));
   }, []);
-//   const [orders, setOrders] = useState([]);
 
-// useEffect(() => {
-//   fetch('https://shielded-river-66834.herokuapp.com/order')
-//       .then(res => res.json())
-//       .then(dt => setOrders(dt))
-// }, []);
-
-// const handleOrderDelete = (id) => {
-// const proceed = window.confirm("Are you sure wanna delete this car?");
-// if (proceed) {
-//   const url = `https://shielded-river-66834.herokuapp.com/order/${id}`;
-//   fetch(url, {
-//     method: "DELETE",
-//   })
-//     .then((res) => res.json())
-//     .then((data) => {
-//       if (data.deletedCount) {
-//         const remaining = orders.filter((order) => order._id !== id);
-//         setOrders(remaining);
-//       }
-//     });
-// }
-// };
  
   const handleDelete = (id) => {
     const url = `https://sleepy-stream-55149.herokuapp.com/orders/${id}`;
@@ -52,8 +69,10 @@ const ManageOrders = () => {
         }
     })
 }
-    return (
-        <Table striped bordered hover variant="dark">
+  return (
+      <div className='mt-5 pt-2'>
+        <h1 className='text-center mb-3 fw-bold fst-italic'>Manage All Orders</h1>
+      <Table striped bordered hover variant="light">
           <thead>
             <tr className="text-center">
               <th>Name</th>
@@ -79,14 +98,15 @@ const ManageOrders = () => {
                     <td>{pl.mobile}</td>
                     <td>{pl.status}</td>
                     <td className="text-center">
-                    <button className="btn btn-danger me-2" onClick={ () => handleDelete(pl._id)}>Done</button>
-                        <button className="btn btn-danger ms-2" onClick={ () => handleDelete(pl._id)}>Del</button>
+                    <button onClick={() => handleUpdate(pl._id)} className="btn btn-success me-2" >Accept</button>
+                        <button className="btn btn-danger ms-2" onClick={ () => handleDelete(pl._id)}>Delete</button>
                     </td>
                 </tr>
             </tbody>
               )
             }
-        </Table>
+      </Table>
+      </div>
     );
 };
 

@@ -14,7 +14,7 @@ const ManageProducts = () => {
       .then ( res => res.json())
       .then ( data => setDataDelete(data));
   },[])
-  console.log(dataDelete);
+ 
 
     const handleDelete = id => {
       const url = `https://sleepy-stream-55149.herokuapp.com/products/${id}`;
@@ -32,20 +32,16 @@ const ManageProducts = () => {
       })
   }
     return (
-        <>
-        <Table striped bordered hover variant="dark">
+      <div className='mt-5 pt-2'>
+        <h1 className='text-center mb-3 fw-bold fst-italic'>Manage All Products</h1>
+        <Table striped bordered hover variant="light">
           <thead>
             <tr className="text-center">
               <th scope="col">ItemName</th>
               <th scope="col">Price</th>
               <th scope="col">Image</th>
               <th scope="col">Description</th>
-              {/* <th scope="col">movement</th>
-              <th scope="col">diameter</th>
-              <th scope="col">waterResistance</th>
-              <th scope="col">gender</th>
-              <th scope="col">strap</th>
-              <th scope="col">dialColor</th> */}
+            
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -65,7 +61,7 @@ const ManageProducts = () => {
                     <td>{pl.dialColor}</td> */}
                     <td className="text-center">
                     <button className="btn btn-danger p-1 m-1" onClick={ () => handleDelete(pl._id)}>DEL</button>
-                    <button className="btn btn-danger p-1 m-1" onClick={handleOrderOpen}>EDIT</button>
+                    <button className="btn btn-primary p-1 m-1" onClick={handleOrderOpen}>EDIT</button>
                     </td>
                 </tr>
             </tbody>
@@ -78,7 +74,7 @@ const ManageProducts = () => {
           openOrder = {openOrder}
           dataDelete={dataDelete}
         ></EditProduct>
-        </>
+        </div>
     );
 };
 

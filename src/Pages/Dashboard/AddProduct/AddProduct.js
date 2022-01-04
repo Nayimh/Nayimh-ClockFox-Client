@@ -3,7 +3,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 const AddProduct = () => {
 
-    const [addProduct, setAddProduct ] = useState();
+    const [addProduct, setAddProduct] = useState();
 
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -36,8 +36,9 @@ const AddProduct = () => {
     };
     
     return (
-        <Container className="bg-dark px-4 py-5 mb-4 rounded">
-            <Form className="mb-3 mx-5" onSubmit={handleProductSubmit}>
+        <Container className="bg-secondary px-4 py-5 mb-4 rounded mt-5 pt-5 d-flex">
+           
+            <Form className=" col-sm-12 col-md-12 mb-3 mx-auto " onSubmit={handleProductSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} >
                         <Form.Control type="text" name="name" onBlur={handleOnBlur} placeholder="Item Name" required />
@@ -60,12 +61,13 @@ const AddProduct = () => {
                 
 
                 <div className="text-center mt-5">
-                    <Button variant="danger" type="submit" className="w-50" >
+                    <Button variant="primary" type="submit" className="w-50" >
                         Submit
                     </Button>
                 </div>
           </Form>
-        </Container>
+          
+            </Container>
     );
 };
 

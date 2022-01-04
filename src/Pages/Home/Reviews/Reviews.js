@@ -14,13 +14,13 @@ const Reviews = () => {
 
     const [review, setReview] = useState([]);
     useEffect(() => {
-        const url = 'http://localhost:3030/reviews';
+        const url = 'https://sleepy-stream-55149.herokuapp.com/reviews';
         fetch(url)
             .then(res => res.json())
             .then(data => setReview(data));
     }, []);
     return (
-        <div>
+        <div >
             <div className="text-center m-0 py-3 mt-2">
                 <h1 className='fw-bold fst-italic text-primary'>Client's Feedback</h1>
             </div>

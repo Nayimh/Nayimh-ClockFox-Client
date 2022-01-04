@@ -69,7 +69,7 @@ const Register = () => {
                         name="password2"
                         onBlur={handleOnBlur} />
                 </Form.Group>
-                <Button variant="warning" type="submit">Register</Button>
+                <Button variant="primary" type="submit">Register</Button>
             </Form>
             <div className="mx-auto text-center">
                 {isLoading && <div className="spinner-border text-primary" role="status">
