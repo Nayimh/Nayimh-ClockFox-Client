@@ -14,7 +14,7 @@ const Store = () => {
     })
     const [product, setProduct] = useState([]);
     useEffect(() => {
-        const url = './products.json';
+        const url = 'https://sleepy-stream-55149.herokuapp.com/products';
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data));
@@ -34,7 +34,7 @@ const Store = () => {
                             <p className="px-4 my-2">{pd.description}</p>
                             <h5 className="px-4 my-3 fw-bold fst-italic text-center">Price: {pd.price} tk</h5>
                             <div className='text-center'>
-                                <Link to={`/purchase/${pd.id}`}>
+                                <Link to={`/purchase/${pd._id}`}>
                                     <Button variant="outline-primary" className="fw-bold mb-3 px-3 py-2">Book Now</Button>
                                 </Link>
                             </div>

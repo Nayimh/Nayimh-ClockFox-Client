@@ -8,13 +8,63 @@ const Purchase = () => {
     const { id } = useParams();
     const { user } = useAuth();
 
-    const [details, setDetails] = useState([]);
+    const [purchese, setPurchese] = useState([]);
+    const [details, setDetails] = useState({});
     useEffect(() => {
-        const url = `http://localhost:3030/products?pdt=${id}`;
+        const url = `https://sleepy-stream-55149.herokuapp.com/products`;
         fetch(url)
             .then(res => res.json())
-            .then(data => setDetails(data.queryProductInfo));
-    }, [id]);
+            .then(data => setPurchese(data));
+    }, []);
+
+    useEffect(()=>{
+        const foundDetails = purchese.find(ps=> ps._id === id);
+        setDetails(foundDetails);
+    },[id, purchese])
+
+    //const [plants, setPlants] = useState([]);
+    // const [details, setDetails] = useState({});
+    
+
+    // useEffect(() => {
+    //     fetch('https://shielded-river-66834.herokuapp.com/bonsai')
+    //         .then(res => res.json())
+    //         .then(dt => setPlants(dt))
+    // }, []);
+    
+    // useEffect(() => {
+    //     const foundDetails = plants.find(plant => plant._id === id);
+    //     setDetails(foundDetails);
+    // }, [id, plants])
+    
+    
+
+    // const handleOrderSubmit = (e) => {
+    //     const email = user?.email;
+    //     // const carId = details?.carId;
+    //     const name = details?.name;
+    //     const img = details?.img;
+    //     const desc = details?.desc;
+    //     const price = details.price;
+    //     const ordersInfo = { email, name, desc, img, price };
+    
+    //     fetch("https://shielded-river-66834.herokuapp.com/order", {
+    //       method: "POST",
+    //       headers: {
+    //         "content-type": "application/json",
+    //       },
+    //       body: JSON.stringify(ordersInfo),
+    //     });
+    //     alert("Order has been placed successfully");
+    //     history.push('/dashboard')
+    //     e.target.reset();
+    //     e.preventDefault();
+    //   };
+     
+
+
+
+
 
     const nameRef = useRef();
     const emailRef = useRef();
@@ -34,7 +84,7 @@ const Purchase = () => {
 
         const purchaseInfo = { name, email, product, price, address, mobile, status };
 
-        const url = 'http://localhost:3030/orders';
+        const url = 'https://sleepy-stream-55149.herokuapp.com/orders';
         fetch(url, {
             method: 'POST',
             headers: {

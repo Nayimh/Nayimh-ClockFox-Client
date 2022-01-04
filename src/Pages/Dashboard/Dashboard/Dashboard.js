@@ -7,6 +7,7 @@ import useAuth from '../../../hooks/useAuth';
 const Dashboard = () => {
     const { admin } = useAuth();
     return (
+        <>
         <div className="d-flex">
             <div className="col-4 col-lg-2">
                 <div className="d-flex flex-column flex-shrink-0 p-3 bg-light h-100">
@@ -32,6 +33,7 @@ const Dashboard = () => {
                 <Outlet />
             </div>
         </div>
+    </>
     );
 };
 
