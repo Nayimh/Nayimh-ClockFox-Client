@@ -137,7 +137,7 @@ useEffect(() => {
                         ref={mobileRef}
                         placeholder="Your mobile number" />
                 </Form.Group>
-                <Link to='/store'><Button className='w-100' variant="primary" type="submit">Buy Now</Button></Link>
+                <Link to='/store'><Button className='w-100' variant="primary" type='submit'>Buy Now</Button></Link>
                 
             </Form>
         </div>

@@ -23,7 +23,7 @@ const ManageProducts = () => {
       })
       .then( res => res.json())
       .then( data => {
-          console.log(data);
+          
           if(data.deletedCount) {
             alert('Data Delete Successfully');
               const remaining = dataDelete.filter(pl => pl._id !==id)
@@ -54,11 +54,7 @@ const ManageProducts = () => {
                     <td>{pl.price}</td>
                     <td><img src={pl.image} style={{width:"120px", height:"120px", objectFit:"cover"}} alt="" /></td>
                     <td>{pl.description}</td>
-                    {/*<td>{pl.diameter}</td>
-                    <td>{pl.waterResistance}</td>
-                    <td>{pl.gender}</td>
-                    <td>{pl.strap}</td>
-                    <td>{pl.dialColor}</td> */}
+                    
                     <td className="text-center">
                     <button className="btn btn-danger p-1 m-1" onClick={ () => handleDelete(pl._id)}>DEL</button>
                     <button className="btn btn-primary p-1 m-1" onClick={handleOrderOpen}>EDIT</button>

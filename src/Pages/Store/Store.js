@@ -28,7 +28,7 @@ const Store = () => {
             <div className="product-container mx-5 pb-4">
                 {
                     product?.map((pd) => (
-                        <div data-aos="zoom-in-up" data-aos-duration="3000" key={pd.id} className="bg-light showroom mx-3 mb-3 rounded-3 shadow-lg">
+                        <div data-aos="zoom-in-up" data-aos-duration="3000" key={pd._id} className="bg-light showroom mx-3 mb-3 rounded-3 shadow-lg">
                             <img className="img-fluid w-80 border border-0 p-3 mb-1" src={pd.image} alt="not found" />
                             <h4 className="text-center fw-bold fst-italic my-2">{pd.name}</h4>
                             <p className="px-4 my-2">{pd.description}</p>

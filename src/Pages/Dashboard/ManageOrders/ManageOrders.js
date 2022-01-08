@@ -98,7 +98,7 @@ const ManageOrders = () => {
                     <td>{pl.mobile}</td>
                     <td>{pl.status}</td>
                     <td className="text-center">
-                    <button onClick={() => handleUpdate(pl._id)} className="btn btn-success me-2" >Accept</button>
+                    {pl.status === "Pending" && <button onClick={() => handleUpdate(pl._id)} className="btn btn-success me-2" >Accept</button>}
                         <button className="btn btn-danger ms-2" onClick={ () => handleDelete(pl._id)}>Delete</button>
                     </td>
                 </tr>

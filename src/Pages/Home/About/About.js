@@ -66,7 +66,7 @@ const About = () => {
                     <div className="fs-5 mx-5 my-3">
                         <h3 className="fw-bold fst-italic">We Provide :</h3>
                         <ul className="ms-5 fst-italic ">
-                            <li data-testId="about">Genuine product and parts</li>
+                            <li>Genuine product and parts</li>
                             <li>State-of-art collections</li>
                             <li>Product with reasonable price</li>
                             <li>After-sales service</li>
